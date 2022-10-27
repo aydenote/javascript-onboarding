@@ -52,6 +52,15 @@ function problem1(pobi, crong) {
   pobiMaxPoint = Math.max(...pobiPoint);
   crongMaxPoint = Math.max(...crongPoint);
 
+  // 각 유저가 가지고 있는 가장 큰 값을 비교하여 answer에 값 저장.
+  if (pobiMaxPoint > crongMaxPoint) {
+    answer = 1;
+  } else if (pobiMaxPoint < crongMaxPoint) {
+    answer = 2;
+  } else {
+    answer = 0;
+  }
+
   return answer;
 }
 
