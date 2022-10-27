@@ -14,6 +14,44 @@ function problem1(pobi, crong) {
       return -1;
     }
   }
+
+  /** 각 자리 숫자의 합 중에 가장 큰 값 반환*/
+  function pointSum(user) {
+    const pointSum = [];
+    for (let i = 0; i < user.length; i++) {
+      pointSum.push(
+        user[i]
+          .toString()
+          .split("")
+          .reduce((a, b) => parseInt(a) + parseInt(b))
+      );
+    }
+    return Math.max(...pointSum);
+  }
+
+  /** 각 자리 숫자의 곱 중에 가장 큰 값 반환*/
+  function pointMul(user) {
+    const pointMul = [];
+
+    for (let i = 0; i < user.length; i++) {
+      pointMul.push(
+        user[i]
+          .toString()
+          .split("")
+          .reduce((a, b) => parseInt(a) * parseInt(b))
+      );
+    }
+    return Math.max(...pointMul);
+  }
+
+  // 각 사용자(포비, 크롱) 페이지 연산 결과 가장 큰 값 저장.
+  pobiPoint.push(pointSum(pobi));
+  pobiPoint.push(pointMul(pobi));
+  crongPoint.push(pointSum(crong));
+  crongPoint.push(pointMul(crong));
+  pobiMaxPoint = Math.max(...pobiPoint);
+  crongMaxPoint = Math.max(...crongPoint);
+
   return answer;
 }
 
