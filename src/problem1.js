@@ -1,5 +1,9 @@
 function problem1(pobi, crong) {
   let answer;
+  let pobiPoint = [];
+  let crongPoint = [];
+  let pobiMaxPoint = 0;
+  let crongMaxPoint = 0;
 
   /** 포비 페이지 번호 예외 처리 */
   for (let i = 0; i < pobi.length; i++) {
