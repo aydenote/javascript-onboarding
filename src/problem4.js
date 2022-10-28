@@ -1,5 +1,10 @@
 function problem4(word) {
-  var answer;
+  let answer = "";
+  let wordArr = word.split("");
+
+  for (let i = 0; i < wordArr.length; i++) {
+    let wordAscii = wordArr[i].charCodeAt();
+  }
   return answer;
 }
 
